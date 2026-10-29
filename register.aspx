@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="woox_travel_app_.WebForm1" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="woox_travel_app_.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -35,6 +35,7 @@
                     ID="txtFullName"
                     runat="server"
                     CssClass="input-box"
+                    autocomplete="name"
                     placeholder="Ex. John Smithee">
                 </asp:TextBox>
 
@@ -51,6 +52,7 @@
                     runat="server"
                     CssClass="input-box"
                     TextMode="Email"
+                    autocomplete="email"
                     placeholder="you@example.com">
                 </asp:TextBox>
 
@@ -67,6 +69,7 @@
                     runat="server"
                     CssClass="input-box"
                     TextMode="Phone"
+                    autocomplete="tel"
                     placeholder="Ex. +XXX XXX XXX">
                 </asp:TextBox>
 
@@ -168,17 +171,11 @@
         </div>
 
           <!-- GridView -->
-    <asp:GridView
-        ID="GridView1"
-        runat="server" AutoGenerateColumns="False">
-        <Columns>
-            <asp:TemplateField HeaderText="FullName"></asp:TemplateField>
-            <asp:TemplateField HeaderText="Email"></asp:TemplateField>
-            <asp:TemplateField HeaderText="Phone"></asp:TemplateField>
-            <asp:TemplateField HeaderText="Password"></asp:TemplateField>
-            <asp:TemplateField HeaderText="CreatedDate"></asp:TemplateField>
-        </Columns>
-    </asp:GridView>
+   
+
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true">
+        </asp:GridView>
+   
 
     </form>
 
